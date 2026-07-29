@@ -1,5 +1,5 @@
-# Use official OpenJDK runtime image as base
-FROM openjdk:17-jdk-slim
+# Use official Eclipse Temurin OpenJDK 17 base image
+FROM eclipse-temurin:17-jdk
 
 # Set working directory inside container
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the compiled JAR file into the container
 COPY target/orderservice-1.0-SNAPSHOT.jar app.jar
 
-# Expose port (if applicable)
+# Expose port 8080
 EXPOSE 8080
 
 # Command to run the application

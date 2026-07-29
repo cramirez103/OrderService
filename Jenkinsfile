@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3' // Matches the name you gave in Jenkins Tools
+    }
+
     stages {
         stage('Checkout Code') {
             steps {
@@ -12,7 +16,6 @@ pipeline {
         stage('Build & Test') {
             steps {
                 echo 'Compiling code and running JUnit test suite...'
-                // Uses Maven wrapper or system mvn if configured, or simple mvn clean test
                 bat 'mvn clean test'
             }
         }

@@ -37,3 +37,17 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Terraform local state and downloaded plugins
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Maven build artifacts
+target/
+
+# IDE / System files
+.idea/
+*.iml
+*.log
